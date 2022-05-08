@@ -27,6 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="style.css" rel="stylesheet">
+  <link href="profile.css" rel="stylesheet">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -34,157 +35,7 @@
   <script src="https://kit.fontawesome.com/b6396059b6.js" crossorigin="anonymous"></script>
 
   <style>
-    /* Slideshow container */
-    .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-    }
-
-    .slideshow-container2 {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-    }
-
-    /* Next1 & prev1ious buttons */
-    .prev1, .next1 {
-        cursor: pointer;
-        position: fixed;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        user-select: none;
-        background-color: #8bbfe6;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        top: calc(50% - 25px);
-    }
-
-    .prev2, .next2 {
-        cursor: pointer;
-        position: fixed;
-        top: 64%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-    }
-
-    /* Position the "next1 button" to the right */
-    .next1 {
-        right: 12px;
-        border-radius: 3px 0 0 3px;
-    }
-
-    .next2 {
-        right: 12px;
-        border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev1:hover, .next1:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-
-    .prev2:hover, .next2:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-
-    /* Caption text */
-    .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-    }
-
-/* Number text (1/3 etc) */
-    .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-    }
-
-    /* The dots/bullets/indicators */
-    .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #a3c2ea;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-
-    .dot2 {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #a3c2ea;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-
-    .active1, .dot:hover {
-        background-color: #4884d4;
-    }
-
-    .active2, .dot2:hover {
-        background-color: #4884d4;
-    }
-
-    /* Fading animation */
-    .fade {
-        animation-name: fade1;
-        animation-duration: 1.5s;
-    }
-
-    .fadeModal {
-        animation-name: fade1;
-        animation-duration: 1s;
-    }
-
-    .fade {
-        animation-name: fade2;
-        animation-duration: 1.5s;
-    }
-
-    @keyframes fade1 {
-        from {opacity: .4} 
-        to {opacity: 1}
-    }
-
-    @keyframes fade2 {
-        from {opacity: .4} 
-        to {opacity: 1}
-    }
-
-    /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 300px) {
-        .prev1, .next1,.text {font-size: 11px}
-    }
-
-    @media only screen and (max-width: 300px) {
-        .prev2, .next2,.text {font-size: 11px}
-    }
+    
   </style>
 
 </head>
@@ -200,7 +51,7 @@
       <!--Navbar-->
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
           <li class="dropdown"><a href="#event" class="scrollto"><span>Events</span> <i class="fa-solid fa-chevron-down"></i></a>
             <ul>
               <li><a href="#event">Seminar Nasional</a></li>
@@ -507,67 +358,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   <script src="main.js"></script>
-
-    <script>
-        let slideIndex = 1;
-        let slideIndex2 = 1;
-        showSlides(slideIndex);
-        showSlides2(slideIndex2);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function plusSlides2(n) {
-            showSlides2(slideIndex2 += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function currentSlide2(n) {
-            showSlides2(slideIndex2 = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active1", "");
-            }
-
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active1";
-        }
-
-        function showSlides2(n) {
-            let i;
-            let slides2 = document.getElementsByClassName("mySlides2");
-            let dots2 = document.getElementsByClassName("dot2");
-            if (n > slides2.length) {slideIndex2 = 1}    
-            if (n < 1) {slideIndex2 = slides2.length}
-
-            for (i = 0; i < slides2.length; i++) {
-                slides2[i].style.display = "none";  
-            }
-
-            for (i = 0; i < dots2.length; i++) {
-                dots2[i].className = dots2[i].className.replace(" active2", "");
-            }
-
-            slides2[slideIndex2-1].style.display = "block";  
-            dots2[slideIndex2-1].className += " active2";
-        }
-    </script>
+  <script src="profile.js"></script>
 
 </body>
 
