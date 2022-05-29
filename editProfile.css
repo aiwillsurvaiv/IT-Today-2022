@@ -114,38 +114,3 @@
 .active2, .dot2:hover {
     background-color: #4884d4;
 }
-
-/* DUPLIKAT */
-/* .fade {
-    animation-name: fade1;
-    animation-duration: 1.5s;
-}
-
-.fadeModal {
-    animation-name: fade1;
-    animation-duration: 1s;
-} */
-
-/* .fade {
-    animation-name: fade2;
-    animation-duration: 1.5s;
-} */
-
-/* @keyframes fade1 {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-@keyframes fade2 {
-    from {opacity: .4} 
-    to {opacity: 1}
-} */
-
-/* On smaller screens, decrease text size */
-/* @media only screen and (max-width: 300px) {
-    .prev1, .next1,.text {font-size: 11px}
-}
-
-@media only screen and (max-width: 300px) {
-    .prev2, .next2,.text {font-size: 11px}
-} */
