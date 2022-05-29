@@ -1207,8 +1207,3 @@ b{
   color: rgb(255, 255, 255) !important;
   background: #d69a4e;
 }
-
-.blob{
-  background: url("img/Blob/blob.svg") 0% 0% no-repeat, url("img/Blob/pattern.svg") 0% 5% no-repeat, url("img/Blob/blob2.svg") 100% 36% no-repeat, url("img/Blob/pattern2.svg") 100% 38% no-repeat, url("img/Blob/blob3.svg") 0% 83% no-repeat, url("img/Blob/pattern3.svg") 0% 85% no-repeat;
-  background-size: 40% 30%;
-}
